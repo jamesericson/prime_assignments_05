@@ -1,0 +1,9 @@
+html {
+  background-color: tan;
+}
+
+img {
+  object-fit: cover;
+  width: 10rem;
+  height: 10rem;
+}
