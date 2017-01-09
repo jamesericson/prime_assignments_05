@@ -1,0 +1,12 @@
+<h1 class='title'>All of the Pets</h1>
+<div id="all-pets">
+  <ul  class='tiles' ng-repeat="pet in allPets">
+    <li>
+      <img ng-src={{pet.imageUrl}} alt="pic of {{ pet.name }}">
+      <p>Name: {{ pet.name }}</p>
+      <p>Animal Type: {{ pet.animal }}</p>
+      <p>Age: {{ pet.age }} years</p>
+      <button ng-click="deletePet( pet._id );" >Delete</button>
+    </li>
+  </ul>
+</div>

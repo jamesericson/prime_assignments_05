@@ -3,28 +3,24 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript" src="venders/angular.min.js"></script>
+    <script type="text/javascript" src="venders/angular-route.min.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/master.css">
     <title>Pet Directory</title>
   </head>
   <body ng-app="myApp">
-    <div ng-controller="appController">
+    <header>
+      <img src="images/pet_logo.png" alt="pet logo">
       <h1>Pets</h1>
       <ul>
-        <li ng-repeat="pet in allPets">
-          <p>Name: {{ pet.name }}</p>
-          <p>Animal Type: {{ pet.animal }}</p>
-          <p>Age: {{ pet.age }} years</p>
-          <img ng-src={{pet.imageUrl}} alt="pic of {{ pet.name }}">
-          <button ng-click="deletePet( pet._id );" >Delete</button>
-        </li>
+        <li><a href="#!/home">Home</a></li>
+        <li><a href="#!/add">Add</a></li>
+        <li><a href="#!/pets">All Pets</a></li>
       </ul>
-      <h1>Add a Pet</h1>
-      <input type="text" ng-model="nameIn" placeholder="Name">
-      <input type="text" ng-model="animalIn" placeholder="Type of Animal (e.g. Cat)">
-      <input type="number" ng-model="ageIn" placeholder="Age (in years)">
-      <input type="text" ng-model="imgUrlIn" placeholder="Image URL">
-      <button type="button" ng-click="addPet();" >ENTER</button>
-    </div>
+      <div class="clear-float"></div>
+    </header>
+
+    <main ng-view></main>
+
   </body>
 </html>

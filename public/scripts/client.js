@@ -1,21 +1,33 @@
 console.log('JS here');
 
-var myApp = angular.module( 'myApp', [] );
+var myApp = angular.module('myApp', ['ngRoute']);
 
-myApp.controller( 'appController', [ '$scope', '$http', function( $scope, $http ){
-  console.log('NG here');
+myApp.config(['$routeProvider', function($routeProvider){
+  $routeProvider
+    .when('/home', {
+      templateUrl : 'views/routes/home.html',
+      controller: 'homeController'
+    })
+    .when('/add', {
+      templateUrl : 'views/routes/add.html',
+      controller: 'addController'
+    })
+    .when('/pets', {
+      templateUrl : 'views/routes/pets.html',
+      controller: 'petsController'
+    })
+    .otherwise({
+      redirectTo: 'home'
+    });
+}]);
 
-  $scope.getAllPets = function(){
-    console.log('in getAllPets');
+myApp.controller( 'homeController', [ '$scope', '$http', function( $scope, $http ){
+  console.log('NG home');
 
-    $http({
-      method: 'GET',
-      url: '/petInventory'
-    }).then( function( response ){
-      console.log('response: ', response);
-      $scope.allPets = response.data;
-    });// end http
-  }// end getAllPets()
+}]);// end homeController
+
+myApp.controller( 'addController', [ '$scope', '$http', function( $scope, $http ){
+  console.log('NG add');
 
   $scope.addPet = function(){
     console.log('in addPet');
@@ -31,13 +43,29 @@ myApp.controller( 'appController', [ '$scope', '$http', function( $scope, $http 
       }
     }).then( function( response ){
       console.log('after da post: ', response);
-      $scope.getAllPets();
     });// end http
     $scope.nameIn = '';
     $scope.animalIn = '';
-    $scope.agaIn = '';
+    $scope.ageIn = '';
     $scope.imgUrlIn = '';
   }// end postPet()
+
+}]);// end addController
+
+myApp.controller( 'petsController', [ '$scope', '$http', function( $scope, $http ){
+  console.log('NG pets');
+
+  $scope.getAllPets = function(){
+    console.log('in getAllPets');
+
+    $http({
+      method: 'GET',
+      url: '/petInventory'
+    }).then( function( response ){
+      console.log('response: ', response);
+      $scope.allPets = response.data;
+    });// end http
+  }// end getAllPets()
 
   $scope.deletePet = function(id){
     console.log('in deletePet, with index: ', id);
@@ -52,5 +80,4 @@ myApp.controller( 'appController', [ '$scope', '$http', function( $scope, $http 
   }; // end deletePet
 
   $scope.getAllPets();
-
-}]);// end appController
+}]);// end petsController

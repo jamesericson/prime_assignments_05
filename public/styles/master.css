@@ -1,9 +1,101 @@
 html {
-  background-color: tan;
+  min-width: 485px;
+  text-align: center;
+  color: rgb(95,61,41);
+}
+
+header {
+  margin: -1rem -1rem 0 -1rem;
+  border-top: 3rem solid rgb(206,227,155);
+  border-bottom:
+}
+
+header img{
+  width: 6rem;
+  height: 6rem;
+  margin-left: 2rem;
+  float: left
+}
+
+header h1 {
+  margin-top: 2rem;
+  color: rgb(95,61,41);
+  float: left;
+}
+
+header ul {
+  float: right;
+  list-style-type: none;
+  display: inline-flex;
+  margin-right: 2rem;
+}
+
+header li {
+  margin: 2rem 1rem 0;
+}
+
+header a {
+  color: rgb(95,61,41);
+  text-decoration: none;
+}
+
+header a:hover {
+  border-top: 3px solid rgb(253,194,64);
+}
+
+.clear-float {
+   clear: both;
+}
+
+
+.title {
+  border-top: 2px solid rgb(95,61,41);
+  margin: 0 auto;
+  width: 60%;
+  padding: 1rem;
+}
+
+#add-pet {
+  color: rgb(95,61,41);
+  margin: 0 auto;
+  text-align: center;
+  width: 15rem;
+}
+
+input {
+  width: 13rem;
+  border: 3px solid rgb(253,194,64);
+  border-radius: .5rem;
+  text-align: center;
+  margin: 1rem;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+#all-pets {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.tiles {
+  list-style-type: none;
+  display: inline-flex;
+  margin: 1rem 0;
+}
+
+.tiles li {
+    border: 4px solid rgb(253,194,64);
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 img {
   object-fit: cover;
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 11rem;
+}
+
+p {
+  text-align: center;
+  color: rgb(95,61,41);
 }
