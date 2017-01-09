@@ -10,8 +10,8 @@ header {
 }
 
 footer {
-  margin: 0 -1rem -1rem -1rem;
-  border-bottom: 5rem solid rgb(206,227,155);
+  margin: 7rem -1rem -1rem -1rem;
+  border-bottom: 10rem solid rgb(206,227,155);
 }
 
 header img{
@@ -51,6 +51,15 @@ header a:hover {
    clear: both;
 }
 
+#quote {
+  width: 50%;
+  margin: 2rem auto;
+  border: 4px solid  rgba(253,194,64, .6);
+  border-radius: 1.3rem;
+  padding: 3rem;
+  background-color: rgba(253,194,64, .1);
+  color: rgb(253,194,64)
+}
 
 .title {
   border-top: 2px solid rgb(95,61,41);
@@ -106,6 +115,7 @@ input {
     border: 4px solid rgb(253,194,64);
     border-radius: 1rem;
     padding: 1rem;
+    background-color: rgba(253,194,64, .3);
 }
 
 img {
