@@ -6,8 +6,12 @@ html {
 
 header {
   margin: -1rem -1rem 0 -1rem;
-  border-top: 3rem solid rgb(206,227,155);
-  border-bottom:
+  border-top: 5rem solid rgb(206,227,155);
+}
+
+footer {
+  margin: 0 -1rem -1rem -1rem;
+  border-bottom: 5rem solid rgb(206,227,155);
 }
 
 header img{
@@ -50,7 +54,7 @@ header a:hover {
 
 .title {
   border-top: 2px solid rgb(95,61,41);
-  margin: 0 auto;
+  margin: 0 auto 0;
   width: 60%;
   padding: 1rem;
 }
@@ -64,12 +68,27 @@ header a:hover {
 
 input {
   width: 13rem;
-  border: 3px solid rgb(253,194,64);
+  border: .25rem solid rgb(253,194,64);
   border-radius: .5rem;
   text-align: center;
   margin: 1rem;
   font-size: 15px;
   line-height: 20px;
+}
+
+#add-button {
+  border: none;
+  width: 13.5rem;
+  background-color: rgb(253,194,64);
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgb(95,61,41);
+}
+
+#add-button:hover {
+    background-color: rgba(253,194,64, .7);
 }
 
 #all-pets {
