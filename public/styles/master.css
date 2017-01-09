@@ -2,16 +2,18 @@ html {
   min-width: 485px;
   text-align: center;
   color: rgb(95,61,41);
+  font-family: 'Josefin Slab', serif;
 }
 
 header {
   margin: -1rem -1rem 0 -1rem;
   border-top: 5rem solid rgb(206,227,155);
+  font-family: 'Lobster', cursive;
 }
 
 footer {
-  margin: 7rem -1rem -1rem -1rem;
-  border-bottom: 10rem solid rgb(206,227,155);
+  margin: 3rem -1rem -1rem -1rem;
+  border-bottom: 10rem solid rgba(95,61,41, .1);
 }
 
 header img{
@@ -22,9 +24,10 @@ header img{
 }
 
 header h1 {
-  margin-top: 2rem;
+  margin: .3rem;
   color: rgb(95,61,41);
   float: left;
+  font-size: 4rem;
 }
 
 header ul {
@@ -45,6 +48,7 @@ header a {
 
 header a:hover {
   border-top: 3px solid rgb(253,194,64);
+  color: rgb(253,194,64);
 }
 
 .clear-float {
@@ -61,11 +65,22 @@ header a:hover {
   color: rgb(253,194,64)
 }
 
+#instrucions {
+  margin-top: 0;
+  display: inline-block;
+  text-align: left;
+}
+
 .title {
   border-top: 2px solid rgb(95,61,41);
   margin: 0 auto 0;
   width: 60%;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem;
+  font-family: 'Sansita One', cursive;
+}
+
+h2 {
+  font-family: 'Sansita One', cursive;
 }
 
 #add-pet {
@@ -77,12 +92,14 @@ header a:hover {
 
 input {
   width: 13rem;
-  border: .25rem solid rgb(253,194,64);
+  border: .25rem solid  rgba(253,194,64, .6);
   border-radius: .5rem;
   text-align: center;
   margin: 1rem;
   font-size: 15px;
   line-height: 20px;
+  font-family: 'Josefin Slab', serif;
+  list-style-position: inherit;
 }
 
 #add-button {
@@ -94,6 +111,7 @@ input {
   font-size: 15px;
   line-height: 20px;
   color: rgb(95,61,41);
+  font-family: 'Sansita One', cursive;
 }
 
 #add-button:hover {
@@ -108,23 +126,36 @@ input {
 .tiles {
   list-style-type: none;
   display: inline-flex;
-  margin: 1rem 0;
+  margin: 1rem -.5rem;
 }
 
 .tiles li {
     border: 4px solid rgb(253,194,64);
+    background-color: rgba(253,194,64, .3);
     border-radius: 1rem;
     padding: 1rem;
-    background-color: rgba(253,194,64, .3);
 }
 
 img {
+  border-bottom: 4px solid rgb(253,194,64);
   object-fit: cover;
   width: 9rem;
   height: 11rem;
 }
 
-p {
-  text-align: center;
+#logo {
+  border: none;
+}
+
+.deleteButton {
+  margin: 0 -1rem -1rem;
+  padding: .5rem;
+  background-color: rgba(253,194,64, .3);
+  background: -webkit-linear-gradient(rgba(253,194,64, .3), rgba(253,194,64, 0));
+  color: rgb(253,194,64);
+  font-family: 'Sansita One', cursive;
+}
+
+.deleteButton:hover {
   color: rgb(95,61,41);
 }
